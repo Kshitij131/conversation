@@ -1,10 +1,19 @@
-import React, { useState , useRef} from 'react';
+import React, { useState, useRef } from 'react';
 
 const Conversation = ({ conversationId }) => {
   const soundFiles = {
     'conversation1': require('./sounds/q1.wav'),
     'conversation2': require('./sounds/q2.mp3'),
     'conversation3': require('./sounds/q3.mp3'),
+    'conversation4': require('./sounds/q5.mp3'),
+    'conversation5': require('./sounds/q6.mp3'),
+    'conversation6': require('./sounds/q7.mp3'),
+    'conversation7': require('./sounds/q8.mp3'),
+    "conversation9": require('./sounds/q10.mp3'),
+    "conversation10": require('./sounds/q11.mp3'),
+    "conversation11": require('./sounds/q12.mp3'),
+    "conversation12": require('./sounds/q13.mp3'),
+    "conversation13": require('./sounds/q14.mp3'),
     // Add more sound files for each conversation ID
   };
 
@@ -23,23 +32,20 @@ const Conversation = ({ conversationId }) => {
       cursor: 'pointer',
       boxShadow: '0 4px 0 #46A302',
       transition: 'all 0.1s ease',
-      ':active': {
-        transform: 'translateY(4px)',
-        boxShadow: 'none',
-      },
+      float: 'right',
     },
   };
 
   const handleClick = () => {
     if (isPlaying) {
-      audioRef.current.pause(); // Access audio using audioRef.current
+      audioRef.current.pause();
     } else {
       audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
   };
 
-  audioRef.current.onended = () => { 
+  audioRef.current.onended = () => {
     setIsPlaying(false);
   };
 
@@ -50,15 +56,4 @@ const Conversation = ({ conversationId }) => {
   );
 };
 
-// Example usage:
-const App = () => {
-  return (
-    <div>
-      <Conversation conversationId="conversation1" />
-      {/* Other components or content */}
-     
-    </div>
-  );
-};
-
-export default App;
+export default Conversation;
