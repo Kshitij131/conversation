@@ -17,7 +17,7 @@ function ConversationBlog() {
       marginBottom: '40px',
       backgroundColor: '#58CC02',
       color: '#fff',
-      borderRadius: '0 0 15px 15px',
+      borderRadius: '15px',
       boxShadow: '0 4px 12px rgba(88, 204, 2, 0.3)',
     },
     conversationItem: {
@@ -153,7 +153,7 @@ function ConversationBlog() {
       </div>
 
       <footer style={{ textAlign: 'center', marginTop: '30px', padding: '20px' }}>
-        <p>© 2023 Kannada Learning Blog</p>
+        <p>© 2024 Kannada Learning Blog</p>
       </footer>
     </div>
   );

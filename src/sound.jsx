@@ -37,6 +37,8 @@ const Conversation = ({ conversationId }) => {
   };
 
   const handleClick = () => {
+    console.log(conversationId);
+
     if (isPlaying) {
       audioRef.current.pause();
     } else {
